@@ -1,0 +1,28 @@
+[user]
+  name = {{ FULL NAME }}
+  email = {{ EMAIL ADDRESS }}
+
+[alias]
+  ci = commit
+  co = checkout
+  b = branch
+  nb = checkout -b
+  stat = status
+  sl = stash list
+  sa = stash apply
+  sd = stash drop
+  d = difftool
+  dc = difftool --cached
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[diff]
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
