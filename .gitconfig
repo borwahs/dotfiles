@@ -5,6 +5,7 @@
 [alias]
   ci = commit
   am = commit --amend
+  pom = push origin master
   co = checkout
   b = branch
   nb = checkout -b
