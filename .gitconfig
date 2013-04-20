@@ -4,15 +4,20 @@
 
 [alias]
   ci = commit
+  am = commit --amend
   co = checkout
   b = branch
   nb = checkout -b
   stat = status
+  st = status -sb
   sl = stash list
   sa = stash apply
   sd = stash drop
   d = difftool
   dc = difftool --cached
+
+  #reference -- http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
   #reference -- https://coderwall.com/p/euwpig
   lg = log --color --graph --pretty=tformat:'%C(red)%h%C(reset) -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
