@@ -77,6 +77,7 @@ set_prompts() {
 
     local hostStyle=""
     local userStyle=""
+    local isSSHServer=""
 
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
         tput sgr0 # reset colors
@@ -122,6 +123,7 @@ set_prompts() {
     # connected via ssh
     if [[ "$SSH_TTY" ]]; then
         hostStyle="\[$bold$red\]"
+        isSSHServer="-SERVER"
     else
         hostStyle="\[$yellow\]"
     fi
@@ -133,6 +135,7 @@ set_prompts() {
     PS1+="\[$userStyle\]\u" # username
     PS1+="\[$reset$white\]@"
     PS1+="\[$hostStyle\]\h" # host
+    PS1+="\[$isSSHServer\]" # add -Server next to hostname to help distinguish
     PS1+="\[$reset$white\]: "
     PS1+="\[$green\]\w" # working directory
     PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
