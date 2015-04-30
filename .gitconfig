@@ -1,6 +1,6 @@
 [user]
-  name = {{ FULL NAME }}
-  email = {{ EMAIL ADDRESS }}
+  name = Rob Shaw
+  email = rob@borwahs.com
 
 [alias]
   ci = commit
@@ -16,6 +16,9 @@
   sd = stash drop
   d = difftool
   dc = difftool --cached
+  lcd = show HEAD^0
+  # need to specify commits otherwise includes working copy
+  dlcd = difftool HEAD^1..HEAD^0
 
   #reference -- http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat

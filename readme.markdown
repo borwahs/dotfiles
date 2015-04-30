@@ -11,6 +11,10 @@ __Make sure to copy any current settings from current .bash_profile into the rep
     ln -s ~/Development/Projects/dotfiles/.bash_profile ~/.bash_profile
     ln -s ~/Development/Projects/dotfiles/ ~/.dotfiles
 
+__Make sure to copy any current settings from the .gitconfig in `$HOME` directory before symlinking.__
+
+    ln -s ~/Development/Projects/dotfiles/.gitconfig ~/.gitconfig
+
 ## iTerm
 
 I use [iTerm 2](http://www.iterm2.com/#/section/home) on Mac OS X with the [Solarized](http://ethanschoonover.com/solarized) theme.
