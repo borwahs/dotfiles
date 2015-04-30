@@ -1,10 +1,14 @@
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# go setup
-export GOPATH=$HOME/Development/golang/projects/
+# nvm (node version manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-## following sourced from: https://github.com/necolas/dotfiles
+###
+### following sourced from: https://github.com/necolas/dotfiles
+###
 
 # set 256 color profile where possible
 if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
