@@ -1,7 +1,3 @@
-[user]
-  name = Rob Shaw
-  email = rob@borwahs.com
-
 [alias]
   ci = commit
   am = commit --amend
@@ -47,3 +43,6 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
+
+[include]
+  path = ~/.gitconfig.local
