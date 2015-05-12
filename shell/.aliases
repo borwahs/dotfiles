@@ -1,0 +1,14 @@
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+
+alias owc='open *.xcworkspace'
+
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias od='cd ~/Development'
+
+# Include custom aliases
+if [ -f ~/.aliases.local ]; then
+    source ~/.aliases.local
+fi
