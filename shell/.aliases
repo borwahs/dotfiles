@@ -2,6 +2,9 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
+# display files as list on each row
+alias lns='ls -L | tr -s " "'
+
 alias owc='open *.xcworkspace'
 
 alias path='echo $PATH | tr -s ":" "\n"'
