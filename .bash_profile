@@ -21,6 +21,7 @@ load_dotfiles() {
     declare -a files=(
         $HOME/.dotfiles/shell/.bash_prompt # Custom bash prompt
         $HOME/.dotfiles/shell/.aliases
+        $HOME/.dotfiles/shell/.git_aliases
         $HOME/.dotfiles/shell/.git-completion.bash
     )
 

@@ -147,3 +147,6 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
