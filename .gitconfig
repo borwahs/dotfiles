@@ -31,6 +31,10 @@
   # quickly see stats on each commit
   ls = log --oneline --shortstat --pretty=format:\"%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) %C(red)<%an>%C(reset)\" -C --abbrev-commit
 
+  # see commits for branch from master (in reverse)
+  bc = rev-list master.. --reverse --pretty
+  nbc = rev-list --count master..
+
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
