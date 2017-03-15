@@ -16,6 +16,8 @@
   # need to specify commits otherwise includes working copy
   dlcd = difftool HEAD^1..HEAD^0
 
+  dh = !sh -c 'git difftool $1~1 $1' -
+
   #reference -- http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
@@ -48,5 +50,7 @@
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
 
-[include]
-  path = ~/.gitconfig.local
+[user]
+        useConfigOnly = true
+[credential]
+        helper = osxkeychain
