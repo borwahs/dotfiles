@@ -12,6 +12,11 @@ Currently, there are very minor changes from Zach's version to fit my workflow.
 
 This repository was not forked since I wanted to preserve the history of my previous dotfiles implementation.
 
+## prompt
+
+The prompt used is [pure](https://github.com/sindresorhus/pure) for `zsh`.
+
+`script/bootstrap` will atempt to install the `pure` package via `npm` if it is installed on the machine.
 
 ## usage
 

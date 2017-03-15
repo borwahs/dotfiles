@@ -28,6 +28,10 @@ do
   source $file
 done
 
+# initialize zsh pure prompt
+autoload -U promptinit; promptinit
+prompt pure
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
