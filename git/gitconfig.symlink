@@ -9,6 +9,44 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+
+        ci = commit
+        am = commit --amend
+        pom = push origin master
+        co = checkout
+        b = branch
+        nb = checkout -b
+        stat = status
+        st = status -sb
+        sl = stash list
+        sa = stash apply
+        sd = stash drop
+        d = difftool
+        dc = difftool --cached
+        lcd = show HEAD^0
+        # need to specify commits otherwise includes working copy
+        dlcd = difftool HEAD^1..HEAD^0
+
+        dh = !sh -c 'git difftool $1~1 $1' -
+
+        #reference -- http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+        #reference -- https://coderwall.com/p/euwpig
+        lg = log --color --graph --pretty=tformat:'%C(red)%h%C(reset) -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
+
+        #reference -- unknown
+        lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+
+        #reference -- http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
+        lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+
+        # quickly see stats on each commit
+        ls = log --oneline --shortstat --pretty=format:\"%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) %C(red)<%an>%C(reset)\" -C --abbrev-commit
+
+        # see commits for branch from master (in reverse)
+        bc = rev-list master.. --reverse --pretty
+        nbc = rev-list --count master..
 [color]
         diff = auto
         status = auto
