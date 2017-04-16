@@ -22,8 +22,8 @@ do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# load everything but the path, setup, and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh:#*/setup.zsh}
 do
   source $file
 done
@@ -38,6 +38,12 @@ compinit
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
+do
+  source $file
+done
+
+# load setup files
+for file in ${(M)config_files:#*/setup.zsh}
 do
   source $file
 done
