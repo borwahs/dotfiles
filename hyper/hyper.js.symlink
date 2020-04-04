@@ -1,10 +1,11 @@
 module.exports = {
     config: {
         // default font size in pixels for all tabs
-        fontSize: 13,
+        fontSize: 14.5,
 
         // font family with optional fallbacks
-        fontFamily: '"Droid Sans Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+        //fontFamily: '"Droid Sans Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+        fontFamily: 'Consoloas, "Droid Sans Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
         cursorColor: 'rgba(248,28,229,0.75)',
@@ -68,7 +69,8 @@ module.exports = {
     plugins: [
         'hyper-snazzy',
         'hyperterm-close-on-left',
-        'hypercwd'
+        'hypercwd',
+        'hyper-materialshell',
     ],
 
     // in development, you can create a directory under
