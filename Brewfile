@@ -4,6 +4,9 @@ tap 'homebrew/cask'
 tap 'homebrew/bundle'
 tap 'puma/puma'
 
+# Development
+brew 'go'
+
 # Binaries
 brew 'ack'
 brew 'awscli'
