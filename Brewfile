@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+tap 'homebrew/cask'
 tap 'homebrew/bundle'
 tap 'puma/puma'
 
@@ -21,5 +22,8 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 
-# install zsh shell from brew
+# Apps
+cask 'visual-studio-code'
+
+# Shell
 brew 'zsh'
