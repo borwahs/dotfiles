@@ -6,6 +6,7 @@ tap 'puma/puma'
 
 # Development
 brew 'go'
+brew 'rustup'
 
 # Binaries
 brew 'ack'
