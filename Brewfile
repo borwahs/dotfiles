@@ -1,7 +1,8 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/cask'
 tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'puma/puma'
 
 # Development
@@ -32,6 +33,17 @@ brew 'tree'
 brew 'unrar'
 brew 'wget'
 brew 'yarn'
+
+# Fonts
+cask 'font-architects-daughter'
+cask 'font-fira-code'
+cask 'font-fira-mono'
+cask 'font-hack'
+cask 'font-jetbrains-mono'
+cask 'font-karla'
+cask 'font-lato'
+cask 'font-roboto'
+cask 'font-roboto-mono'
 
 # Apps
 cask 'visual-studio-code'
