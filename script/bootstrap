@@ -141,24 +141,8 @@ install_dotfiles () {
   done
 }
 
-install_npm_dependencies () {
-  if command_exists "npm";
-  then
-    info 'installing npm dependencies'
-    local packages="pure-prompt"
-
-    # TODO: future hide output and only show if error
-    npm install $packages --global --silent
-
-    success 'installed npm dependencies'
-  else
-    fail "error installing npm dependencies"
-  fi
-}
-
 setup_gitconfig
 install_dotfiles
-install_npm_dependencies
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
