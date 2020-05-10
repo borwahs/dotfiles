@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Displays permissions of file as number
+#
+# $1 - filepath.
+#
+# Examples
+#
+#   perms path/to/file
+
+set -e
+
+stat -f "%Lp" $1
