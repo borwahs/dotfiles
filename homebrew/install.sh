@@ -11,11 +11,10 @@ then
   echo "  Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin" -o test "$(expr substr $(uname -s) 1 5)" = "Linux"
+  if [ "$(uname)" = "Darwin" -o  "$(expr substr $(uname -s) 1 5)" = "Linux" ]
   then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   else
-  then
     echo "  Homebrew will not be installed on non-macOS or Linux systems"
   fi
 
