@@ -22,7 +22,9 @@ command_exists () {
   type "$1" &> /dev/null ;
 }
 
-
+overwrite_all=false
+backup_all=false
+skip_all=false
 link_file () {
   local src=$1 dst=$2
 
@@ -31,10 +33,8 @@ link_file () {
 
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
   then
-
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
+    if [ -z "$overwrite_all" -o "$overwrite_all" == "false" ] && [ -z "$backup_all" -o "$backup_all" == "false" ] && [ -z "$skip_all" -o "$skip_all" == "false" ]
     then
-
       local currentSrc="$(readlink $dst)"
 
       if [ "$currentSrc" == "$src" ]
