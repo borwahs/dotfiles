@@ -16,8 +16,6 @@ This repository was not forked since I wanted to preserve the history of my prev
 
 The prompt used is [pure](https://github.com/sindresorhus/pure) for `zsh`.
 
-`script/bootstrap` will atempt to install the `pure` package via `npm` if it is installed on the machine.
-
 ## usage
 
 The following are excerpts from Zach's dotfiles [README](https://github.com/holman/dotfiles/blob/master/README.md).
