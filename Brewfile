@@ -10,6 +10,7 @@ tap 'puma/puma'
 brew 'git'
 brew 'go'
 brew 'nvm'
+brew 'rbenv'
 brew 'rustup'
 brew 'yarn'
 
