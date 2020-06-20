@@ -48,6 +48,7 @@ brew 'wget'
 #cask 'font-roboto-mono'
 
 # Apps
+cask 'hyper'
 cask 'iterm2'
 cask 'visual-studio-code'
 
