@@ -13,7 +13,7 @@ run_software_update () {
 
   user "Run software update?\n\
   [Y/y]es, [N/n]o?"
-  read -n 1 action
+  read -n 1 action <&1
 
   case "$action" in
     N )
