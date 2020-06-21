@@ -6,19 +6,7 @@ My version of dotfiles.
 
 The structure and files are heavily sourced from [Zach Holman's](https://github.com/holman) excellent [dotfiles](https://github.com/holman/dotfiles).
 
-## personalized
-
-Currently, there are very minor changes from Zach's version to fit my workflow.
-
-This repository was not forked since I wanted to preserve the history of my previous dotfiles implementation.
-
-## prompt
-
-The prompt used is [pure](https://github.com/sindresorhus/pure) for `zsh`.
-
-## usage
-
-The following are excerpts from Zach's dotfiles [README](https://github.com/holman/dotfiles/blob/master/README.md).
+## how it works
 
 ### topical
 
@@ -27,13 +15,6 @@ forked dotfiles — say, "Java" — you can simply add a `java` directory and pu
 files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
-### what's inside
-
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
-use, and build on what you do use.
 
 ### components
 
