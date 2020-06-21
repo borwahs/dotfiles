@@ -2,6 +2,8 @@
 
 My version of dotfiles.
 
+⚡️ — as of macOS 10.15 Catalina, `zsh` is used as the default login and interactive shell. it is expected this is being ran on a `zsh` shell.
+
 ## thanks!
 
 The structure and files are heavily sourced from [Zach Holman's](https://github.com/holman) excellent [dotfiles](https://github.com/holman/dotfiles).

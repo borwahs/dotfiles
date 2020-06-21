@@ -51,6 +51,3 @@ brew 'wget'
 cask 'hyper'
 cask 'iterm2'
 cask 'visual-studio-code'
-
-# Shell
-brew 'zsh'
