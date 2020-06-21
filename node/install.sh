@@ -54,6 +54,23 @@ install_node () {
   fi
 }
 
+install_yarn () {
+  if [ ! -d ~/.yarn ]
+  then
+    curl -o- -L https://yarnpkg.com/install.sh | bash
+
+    # remove the auto added export of yarn to path
+    # NOTE: use .symlink file as sed won't follow symlinks in BSD
+    sed -i '' "/yarn/d" "${script_dir}/../zsh/zshrc.symlink"
+    # remove last blank line
+    sed -i '' -e '${/^$/d;}' "${script_dir}/../zsh/zshrc.symlink"
+
+    success 'installed: yarn'
+  else
+    info 'SKIPPING : yarn is already installed'
+  fi
+}
+
 install_npm_dependencies () {
   if command_exists "npm";
   then
@@ -76,6 +93,9 @@ install_nvm
 
 # install node via npm
 install_node
+
+# download and configure yarn
+install_yarn
 
 # # run install npm dependencies (global)
 install_npm_dependencies

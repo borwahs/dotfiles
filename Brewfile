@@ -11,7 +11,6 @@ brew 'git'
 brew 'go'
 brew 'rbenv'
 brew 'rustup'
-brew 'yarn'
 
 # Cloud
 brew 'awscli'
