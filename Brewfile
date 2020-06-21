@@ -9,7 +9,6 @@ tap 'puma/puma'
 # Development
 brew 'git'
 brew 'go'
-brew 'nvm'
 brew 'rbenv'
 brew 'rustup'
 brew 'yarn'

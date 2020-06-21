@@ -1,8 +1,8 @@
-export NVM_DIR="$HOME/.nvm"
+script_dir=${0%/*}
 
-# load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# configure nvm completion
-# supports zsh - https://github.com/nvm-sh/nvm/blob/master/bash_completion#L83
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+if [[ -a "${script_dir}/../zsh/plugins/zsh-nvm" ]]
+then
+  source "${script_dir}/../zsh/plugins/zsh-nvm/zsh-nvm.plugin.zsh"
+else
+  echo "✗ nvm is not installed; run installer in dotfiles"
+fi
