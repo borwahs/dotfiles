@@ -7,6 +7,8 @@ tap 'homebrew/cask-fonts'
 tap 'puma/puma'
 
 # Development
+brew 'docker'
+brew 'docker-machine'
 brew 'git'
 brew 'go'
 brew 'rbenv'
