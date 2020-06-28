@@ -1,5 +1,11 @@
 source "$(dirname $0)/../utils/functions.sh"
 
+DOTFILES_SYMLINK=~/.dotfiles
+if [[ ! -L "$DOTFILES_SYMLINK" || ! -d "$DOTFILES_SYMLINK" ]]
+then
+  fail "$DOTFILES_SYMLINK was not found"
+fi
+
 if [ "$(uname -s)" == "Darwin" ]
 then
   info "linking VSCode configuration (macOS)"
