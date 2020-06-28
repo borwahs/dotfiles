@@ -22,6 +22,19 @@ command_exists () {
   command -v "$1" >/dev/null 2>&1
 }
 
+# get absolute path of file
+# https://serverfault.com/a/942052
+abspath() {
+    if ! pushd $1 &> /dev/null
+    then
+        pushd ${1##*/} &> /dev/null
+        echo $( pwd -P )/${1%/*}
+    else
+        pwd -P
+    fi
+    popd > /dev/null
+}
+
 overwrite_all=false
 backup_all=false
 skip_all=false

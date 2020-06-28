@@ -3,13 +3,17 @@
 # bootstrap installs things.
 
 cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
 
 set -e
 
 source "$(dirname $0)/../utils/functions.sh"
 
+DOTFILES_ROOT=$(abspath $(dirname "$0")/..)
+
 echo ''
+
+# configure ~/.dotfiles to the repo root
+link_file "$DOTFILES_ROOT" ~/.dotfiles
 
 setup_gitconfig () {
   if ! [ -f git/gitconfig.local.symlink ]
