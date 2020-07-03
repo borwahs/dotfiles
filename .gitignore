@@ -1,3 +1,10 @@
+# vscode
+.vscode/
+
+# homebrew
+Brewfile.lock.json
+
+# project
 zsh/plugins/*
 
 *.local
