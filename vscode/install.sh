@@ -12,5 +12,5 @@ then
 
   link_file ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
   link_file ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-  link_file ~/.dotfiles/vscode/snippets ~/Library/Application\ Support/Code/User
+  link_file ~/.dotfiles/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 fi
